@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>PichawatHub</title>
+</head>
+<body>
+    <div action="" onsubmit="">
+        <div>
+            <div class="header"> 
+                <h1>Welcome to pichawatHub</h1>
+            </div>
+            <p>Login to your heaven</p>
+            <div class="login-form">
+                <div class="content">
+                    <div>
+                        <label for="username">username</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label for="password">password</label>
+                        <input type="password" name="" id="">
+                    </div>
+                    <div>
+                        <button>Login</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h1>Pichawat is G A Y?</h1>
+                <p>คำตอบคือ:</p>
+                <p id="ans"></p>
+                <div>
+                    <button onclick="ansFuc()">สุ่ม</button>
+                    <button onclick="reset()">รีเซ็ต</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let result = "";
+    const ansFuc = () =>{
+        if (Math.floor(Math.random() * 2)%2==0){
+            result = "GAY";
+        }
+        else {
+            result = "เล่น GAY กับ บอม"
+        }
+        document.getElementById("ans").innerHTML = `พิชวัฒน์ is ${result}`;
+    }
+    const reset = () =>{
+        result = "";
+        document.getElementById("ans").innerHTML = result;
+    }
+</script>
+</html>
